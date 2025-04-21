@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mini_taskhub_personal_task_tracker/app/theme.dart';
-import 'package:mini_taskhub_personal_task_tracker/auth/auth_service.dart';
-import 'package:mini_taskhub_personal_task_tracker/auth/signup_screen.dart';
-import 'package:mini_taskhub_personal_task_tracker/utils/validators.dart';
+import 'package:mini_taskhub_personal_task_tracker/app/theme.dart'; // Adjusted import path
+import 'package:mini_taskhub_personal_task_tracker/auth/auth_service.dart'; // Adjusted import path
+import 'package:mini_taskhub_personal_task_tracker/auth/signup_screen.dart'; // Adjusted import path
+import 'package:mini_taskhub_personal_task_tracker/utils/validators.dart'; // Adjusted import path
 import 'package:provider/provider.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -33,30 +34,42 @@ class _LoginScreenState extends State<LoginScreen> {
 
     setState(() => _isLoading = true);
     final authService = Provider.of<AuthService>(context, listen: false);
-    FocusScope.of(context).unfocus();
+    FocusScope.of(context).unfocus(); // Hide keyboard
 
     try {
+      // Debug Print: Before the call
       debugPrint('[LoginScreen] Calling authService.signIn for email: ${_emailController.text.trim()}');
       final response = await authService.signIn(
         _emailController.text.trim(),
         _passwordController.text.trim(),
       );
-      debugPrint('[LoginScreen] authService.signIn completed.');
-      debugPrint('[LoginScreen] signIn response: User ID: ${response.user?.id}, Session: ${response.session}');
 
-       if (!mounted) return;
+      // --- DEBUG PRINT ADDED ---
+      // This print confirms the signIn call completed without throwing an Exception
+      debugPrint('[LoginScreen] authService.signIn completed.');
+      // Optionally print details from the response to see if Supabase returned user/session info
+      debugPrint('[LoginScreen] signIn response: User ID: ${response.user?.id}, Session exists: ${response.session != null}');
+      // --- END OF DEBUG PRINT ---
+
+      // No navigation here; AuthGate handles it.
+
+       if (!mounted) return; // Check mount status AFTER await
 
     } catch (e) {
+      // Debug Print: If an error occurred during signIn
       debugPrint('[LoginScreen] Error during signIn: $e');
        if (!mounted) return;
+      // Use the themed error snackbar from AuthService
       authService.showErrorSnackBar(context, e.toString());
     } finally {
+      // Ensure isLoading is set to false even if widget is disposed during await
       if (mounted) {
          setState(() => _isLoading = false);
       }
     }
   }
 
+  // --- build method remains unchanged ---
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -72,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  Text('DayTask', textAlign: TextAlign.center, style: textTheme.headlineLarge),
+                  Text('DayTask', textAlign: TextAlign.center, style: textTheme.headlineLarge), // Uses theme style directly
                   const SizedBox(height: 40),
                   Text('Welcome Back!', style: textTheme.headlineMedium, textAlign: TextAlign.center),
                   const SizedBox(height: 8),
