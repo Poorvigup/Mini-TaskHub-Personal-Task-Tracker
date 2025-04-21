@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # mini_taskhub_personal_task_tracker
 
 A new Flutter project.
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# Mini-TaskHub-Personal-Task-Tracker
+>>>>>>> ecf32c5442613395e2cd7e7d08d8b67cb4d46b96
