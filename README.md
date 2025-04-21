@@ -43,28 +43,37 @@ A simple, personal task tracking application built with Flutter and Supabase. Fe
 *   **UI Fonts:** `google_fonts`
 
 ## Folder Structure
+## Folder Structure
+
+```plaintext
 lib/
 │
-├── main.dart # App entry point, Supabase init, Root Widget, Auth Gate
+├── main.dart              # App entry point, Supabase init, Root Widget, Auth Gate
+│
 ├── app/
-│ ├── theme.dart # App theme definitions (Dark/Light)
-│ └── theme_provider.dart # State management for theme switching
+│   ├── theme.dart         # App theme definitions (Dark/Light)
+│   └── theme_provider.dart # State management for theme switching
+│
 ├── auth/
-│ ├── login_screen.dart # UI for user login
-│ ├── signup_screen.dart # UI for user registration
-│ └── auth_service.dart # Handles Supabase auth logic & snackbars
+│   ├── login_screen.dart    # UI for user login
+│   ├── signup_screen.dart   # UI for user registration
+│   └── auth_service.dart    # Handles Supabase auth logic & snackbars
+│
 ├── dashboard/
-│ ├── dashboard_screen.dart # Main screen showing tasks, FAB, app bar actions
-│ ├── task_tile.dart # Widget for a single task item (incl. actions, status)
-│ ├── task_model.dart # Data model for a Task
-│ └── task_provider.dart # State management for tasks (ChangeNotifier)
+│   ├── dashboard_screen.dart # Main screen showing tasks, FAB, app bar actions
+│   ├── task_tile.dart      # Widget for a single task item (incl. actions, status)
+│   ├── task_model.dart     # Data model for a Task
+│   └── task_provider.dart  # State management for tasks (ChangeNotifier)
+│
 ├── services/
-│ └── supabase_service.dart # Handles Supabase database interactions (CRUD for tasks)
+│   └── supabase_service.dart # Handles Supabase database interactions (CRUD for tasks)
+│
 └── utils/
-└── validators.dart # Form field validation functions
+    └── validators.dart    # Form field validation functions
+
 assets/
 └── images/
-└── google_logo.png # Google logo for auth screens (placeholder button)
+    └── google_logo.png    # Google logo for auth screens (placeholder button)
 
 ## Setup Instructions
 
