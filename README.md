@@ -73,6 +73,7 @@ lib/
 assets/
 └── images/
     └── google_logo.png    # Google logo for auth screens (placeholder button)
+ ```
 
 ## Setup Instructions
 
