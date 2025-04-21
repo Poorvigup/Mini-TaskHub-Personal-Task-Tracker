@@ -3,17 +3,8 @@
 ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 A simple, personal task tracking application built with Flutter and Supabase. Features user authentication, task management (add, complete, edit, delete), and a dark/light theme toggle, styled loosely based on the DayTask design concept.
-
-## Screenshots
-
-*(**ACTION REQUIRED:** Replace the `...` in the `src` attribute below with the actual links or relative paths to your screenshots after uploading them to GitHub or another host)*
-
-| Login Screen                                    | Sign Up Screen                                    | Dashboard (Dark)                                | Dashboard (Light)                               | Add/Edit Task Sheet                           |
-| :----------------------------------------------: | :-----------------------------------------------: | :---------------------------------------------: | :---------------------------------------------: | :-----------------------------------------: |
-| <img src="..." alt="Login Screen" width="200"/> | <img src="..." alt="Sign Up Screen" width="200"/> | <img src="..." alt="Dashboard Dark" width="200"/> | <img src="..." alt="Dashboard Light" width="200"/> | <img src="..." alt="Add/Edit Task" width="200"/> |
 
 ## Features
 
@@ -229,7 +220,3 @@ Flutter offers powerful tools to speed up development. Understanding the differe
     *   If the app's state becomes corrupted or behaves unexpectedly after multiple hot reloads.
 
 **In Summary:** Use **Hot Reload** frequently for rapid iteration on UI and simple logic. Use **Hot Restart** when needed to apply deeper changes or reset the application state.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details (if one exists in the repo) or refer to the standard MIT License text: [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
