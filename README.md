@@ -43,7 +43,6 @@ A simple, personal task tracking application built with Flutter and Supabase. Fe
 *   **UI Fonts:** `google_fonts`
 
 ## Folder Structure
-## Folder Structure
 
 ```plaintext
 lib/
